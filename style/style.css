@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+* {
+  padding: 0;
+  border: none;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+:root {
+  /* colors */
+  --orange: hsl(25, 97%, 53%);
+  /* neutral */
+  --white: hsl(0, 0%, 100%);
+  --Light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+  /* gradient */
+  --black-gradient: radial-gradient(98.96% 98.96% at 50.00% 0%, #232A34 0%, #181E27 100%);
+  /* font */
+  --font-family: "Overpass", sans-serif;
+  --heading-md: 700 1.75rem/normal var(--font-family);
+  --heading-sm: 700 0.9375rem/normal var(--font-family);
+  --rating: 700 1rem/normal var(--font-family);
+  --body: 400 0.9375rem/1.5rem var(--font-family);
+}
+
+body {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  background-color: var(--very-dark-blue);
+  color: var(--white);
+  font-family: var(--font-family);
+}
+
+main {
+  padding: 0 1.5rem;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  width: min(100%, 412px);
+  padding: 2rem;
+  border-radius: 30px;
+  background: var(--black-gradient);
+}
+.card__star {
+  background-color: var(--dark-blue);
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+.card h1, .card h2 {
+  font: var(--heading-md);
+  padding-bottom: 7px;
+}
+.card p {
+  padding-bottom: 1.5rem;
+  font: var(--body);
+  color: var(--Light-grey);
+}
+.card__ratings {
+  width: 100%;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.card__ratings input[type=radio] {
+  display: none;
+}
+.card__ratings label {
+  width: 42px;
+  aspect-ratio: 1/1;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font: var(--rating);
+  background-color: var(--dark-blue);
+  color: var(--Light-grey);
+  cursor: pointer;
+}
+@media screen and (min-width: 400px) {
+  .card__ratings label {
+    width: 51px;
+  }
+}
+.card__ratings label:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
+.card__ratings input[type=radio]:checked + label {
+  background-color: var(--Light-grey);
+  color: var(--white);
+}
+.card__ratings input[type=radio]:checked + label:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
+.card__btn {
+  width: 100%;
+  height: 45px;
+  border-radius: 22.5px;
+  background-color: var(--white);
+  color: var(--orange);
+  font: var(--heading-sm);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.card__btn:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
+.card__message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card__thank-img {
+  width: 162px;
+  height: auto;
+}
+.card__rating {
+  padding: 4px 20px;
+  border-radius: 20px;
+  margin: 2rem 0;
+  font: var(--body);
+  background-color: var(--dark-blue);
+  color: var(--orange);
+}
+.card__message-txt {
+  padding-bottom: 13px;
+  text-align: center;
+}
+
+.attribution {
+  height: 64px;
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+}
+.attribution a {
+  color: var(--orange);
+  text-decoration: none;
+}
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=style.css.map */

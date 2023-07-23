@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Interactive rating component</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <script src="./script/script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <article class="card" id="message">
+        <img class="card__star" src="./images/icon-star.svg" alt="" />
+        <h1>How did we do?</h1>
+        <p>
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <form id="form">
+          <section class="card__ratings">
+            <input type="radio" name="rating" id="one" />
+            <label for="one">1</label>
+            <input type="radio" name="rating" id="two" />
+            <label for="two">2</label>
+            <input type="radio" name="rating" id="three" />
+            <label for="three">3</label>
+            <input type="radio" name="rating" id="four" />
+            <label for="four">4</label>
+            <input type="radio" name="rating" id="five" />
+            <label for="five">5</label>
+          </section>
+          <button class="card__btn" type="submit">Submit</button>
+        </form>
+      </article>
+    </main>
+    <footer class="attribution">
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.frontendmentor.io/profile/seanbuckle"
+          >Sean Buckle</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>
