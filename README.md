@@ -38,13 +38,13 @@ Users should be able to:
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- JavaScript
-- SCSS/SASS preprocessor
+- [Semantic HTML5 markup](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+- [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/flex)
+- [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
+- [Mobile-first workflow](https://www.uxpin.com/studio/blog/a-hands-on-guide-to-mobile-first-design/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [SCSS/SASS](https://sass-lang.com/)
 
 ## Author
 
