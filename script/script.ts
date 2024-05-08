@@ -1,41 +1,22 @@
 window.addEventListener("load", () => {
-  let form: HTMLFormElement = document.getElementById(
+  const form: HTMLFormElement = document.getElementById(
     "form"
   ) as HTMLFormElement;
-  let message: HTMLElement = document.getElementById("message") as HTMLElement;
+  const message: HTMLElement = document.getElementById(
+    "message"
+  ) as HTMLElement;
 
   form.addEventListener("submit", (e: Event) => {
     e.preventDefault();
-    let one: HTMLInputElement = document.querySelector(
-      "#one:checked"
-    ) as HTMLInputElement;
-    let two: HTMLInputElement = document.querySelector(
-      "#two:checked"
-    ) as HTMLInputElement;
-    let three: HTMLInputElement = document.querySelector(
-      "#three:checked"
-    ) as HTMLInputElement;
-    let four: HTMLInputElement = document.querySelector(
-      "#four:checked"
-    ) as HTMLInputElement;
-    let five: HTMLInputElement = document.querySelector(
-      "#five:checked"
-    ) as HTMLInputElement;
+    const one = (document.getElementById("one") as HTMLInputElement)?.checked;
+    const two = (document.getElementById("two") as HTMLInputElement)?.checked;
+    const three = (document.getElementById("three") as HTMLInputElement)
+      ?.checked;
+    const four = (document.getElementById("four") as HTMLInputElement)?.checked;
+    const five = (document.getElementById("five") as HTMLInputElement)?.checked;
     let rating: number | string;
-    if (one) {
-      rating = 1;
-    } else if (two) {
-      rating = 2;
-    } else if (three) {
-      rating = 3;
-    } else if (four) {
-      rating = 4;
-    } else if (five) {
-      rating = 5;
-    } else {
-      rating = "";
-    }
-    if (rating == "") {
+    rating = one ? 1 : two ? 2 : three ? 3 : four ? 4 : five ? 5 : "";
+    if (rating === "") {
       return false;
     } else {
       message.innerHTML = `
@@ -45,7 +26,7 @@ window.addEventListener("load", () => {
             <h2>Thank you!</h2>
             <p class="card__message-txt">We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
             </section>
-            `;
+        `;
     }
   });
 });
